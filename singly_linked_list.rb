@@ -89,3 +89,16 @@ class SinglyLinkedList
     end
   end
 end
+
+list = SinglyLinkedList.new
+list.insert(1)
+list.insert(2)
+list.print
+list.find_first { |node| node.value == 2 }
+
+list2 = SinglyLinkedList.new
+list2.insert(3)
+list.cat(list2)
+
+list.remove(Node.new(2))
+list.clear
